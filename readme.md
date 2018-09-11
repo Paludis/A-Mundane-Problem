@@ -1,6 +1,6 @@
 # A Mundane Problem
 
-This is a project to show a weird bug with UIReferenceLibraryViewController where it fails to present modally and makes the whole app unresponsive for certain words (the word I have found that does this is 'mundane').
+This is a project to show a weird bug with UIReferenceLibraryViewController where it fails to be presented modally, and makes the whole app unresponsive when initialized with certain words (the word I have found that causes this behavior is 'mundane').
 
 Note that this only happens on actual devices, the bug does not seem to occur in the iOS simulator.
 
