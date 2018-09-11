@@ -12,7 +12,7 @@ If the Japanese-English dictionary is the only dictionary installed, the initial
 If the Japanese-English dictionary plus one or more other dictionaries are installed, the definition screen is not shown at all, and the app becomes unresponsive.
 
 ## Steps to reproduce
-1. Ensure that 2 dictionaries are installed on your device, including the Japanese-English dictionary
+1. Ensure that 2 or more dictionaries, including the Japanese-English dictionary, are installed on your device.
 2. Install & run the project.
 3. Tap 'exciting'. Verify that the UIReferenceLibraryViewController is shown.
 4. Tap 'mundane'. 
