@@ -4,6 +4,8 @@ This is a project to show a weird bug with UIReferenceLibraryViewController wher
 
 Note that this only happens on actual devices, the bug does not seem to occur in the iOS simulator.
 
+This bug has been tested on iPhone X, iOS 11.4.1
+
 ## Steps to reproduce
 1. Install & run the app on your device
 2. Tap 'exciting'. Verify that the UIReferenceLibraryViewController is shown
