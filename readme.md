@@ -1,15 +1,21 @@
 # A Mundane Problem
 
-This is a project to show a weird bug with UIReferenceLibraryViewController where it fails to be presented modally, and makes the whole app unresponsive when initialized with certain words (the word I have found that causes this behavior is 'mundane').
+On an iPhone X running iOS 11.4.1, built with Xcode 9.4.1, the following code causes the app to become completely unresponsive:
 
-Note that this only happens on actual devices, the bug does not seem to occur in the iOS simulator.
+    let dictionaryVC = UIReferenceLibraryViewController(term: "mundane")
+    self.present(dictionaryVC, animated: true, completion: nil)
 
-This bug has been tested on iPhone X, iOS 11.4.1
+This occurs when the Japanese-English dictionary is installed.
+
+If the Japanese-English dictionary is the only dictionary installed, the initial definition screen is shown, but pressing the back 'Dictionary' button on that screen causes the app to become unresponsive.
+
+If the Japanese-English dictionary plus one or more other dictionaries are installed, the definition screen is not shown at all, and the app becomes unresponsive.
 
 ## Steps to reproduce
-1. Install & run the app on your device
-2. Tap 'exciting'. Verify that the UIReferenceLibraryViewController is shown
-3. Tap 'mundane'. 
+1. Ensure that 2 dictionaries are installed on your device, including the Japanese-English dictionary
+2. Install & run the project.
+3. Tap 'exciting'. Verify that the UIReferenceLibraryViewController is shown.
+4. Tap 'mundane'. 
 
 ## Expected Result
 UIReferenceLibraryViewController is shown for 'mundane', as it was for 'exciting'
